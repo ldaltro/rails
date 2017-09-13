@@ -751,7 +751,7 @@ module ActionView
         if model
           url ||= polymorphic_path(model, format: format)
 
-          model   = model.last if model.is_a?(Array)
+          model = model.last if model.is_a?(Array)
           scope ||= model_name_from_record_or_class(model).param_key
         end
 
